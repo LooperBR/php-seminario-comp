@@ -16,9 +16,32 @@ if(isset($_POST["nome"]) && isset($_POST["idade"])){
 <body>
     
     <?php
-        $array = [1,2,3,4,5,6,7,27];
+        $array = array(1,2,3,4,5,6,7,27);
         //echo é usado para strings, var_dump pode ser usada para mostrar qualquer tipo de variavel
         var_dump($array);
+        echo '<br/>';
+        //pode se manipular cada parte do array
+        $array[0] = 7;
+        
+        var_dump($array);
+
+        echo "<br>";
+
+        $mapa = array(
+            "nome" => "joao",
+            "idade" => 21,
+            "curso" => "computação"
+        );
+
+        var_dump($mapa);
+
+        echo "<br>";
+        echo $mapa["nome"]."<br>";
+        echo $mapa["idade"]."<br>";
+        echo $mapa["curso"]."<br>";
+        echo $mapa["cartao"]."<br>";
+
+        
     ?>
     <form action="" method="POST">
         <input type="text" name="nome" required/>
